@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    //return view('welcome');
-	echo 'Hello World!';
-});
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +24,31 @@ Route::get('/', function () {
 |
 */
 
+
+
+
 Route::group(['middleware' => ['web']], function () {
-    //
+    Route::get('/', function () {
+    //return view('welcome');
+	echo 'Hello World!';
 });
+
+
+/*Route::get('/books', function() {
+	return 'Show a list of all books';
+});*/
+
+Route::get('/books', 'BookController@getIndex');
+Route::get('/book/create', 'BookController@getCreate');
+Route::post('/book/create', 'BookController@postCreate');
+Route::get('/book/{id}', 'BookController@getShow');
+
+
+
+
+
+});
+
+
+
+
