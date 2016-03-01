@@ -1,8 +1,8 @@
 <?php
 
-namespace Foobooks\Http\Controllers;
+namespace App\Http\Controllers;
 
-use Foobooks\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 
 class BookController extends Controller {
 
