@@ -44,6 +44,14 @@ Route::post('/book/create', 'BookController@postCreate');
 Route::get('/book/{id}', 'BookController@getShow');
 
 
+//Digital Ocean sugested fix from Piazza:
+
+Route::get('/foobooks/public//books', 'BookController@getIndex');
+Route::get('/foobooks/public//book/create', 'BookController@getCreate');
+Route::post('/foobooks/public//book/create', 'BookController@postCreate');
+Route::get('/foobooks/public//book/{id}', 'BookController@getShow');
+
+
 
 
 
