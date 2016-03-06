@@ -24,7 +24,7 @@
 |
 */
 
-
+//use \Rych\Random\Random;
 
 
 Route::group(['middleware' => ['web']], function () {
@@ -43,13 +43,28 @@ Route::get('/book/create', 'BookController@getCreate');
 Route::post('/book/create', 'BookController@postCreate');
 Route::get('/book/{id}', 'BookController@getShow');
 
-Route::get('practice', function(){
+Route::get('/practice', function() {
 		//echo config('mail.driver');
 		//return 'practice';
-		echo config('app.env') . '<br>';
-		echo config('app.url');
+		//echo config('app.env') . '<br>';
+		//echo config('app.url');
 		//echo config('app.debug');
+		
+		 $random = new Random();
+    	return $random->getRandomString(8);
+
+    	//$data = Array('foo' => 'bar');
+   		//Debugbar::info($data);
+    	//Debugbar::error('Error!');
+   		//Debugbar::warning('Watch out…');
+    	//Debugbar::addMessage('Another message', 'mylabel');
+
+   	 	//return '';
+
 	});
+
+
+
 
 });
 
