@@ -43,17 +43,13 @@ Route::get('/book/create', 'BookController@getCreate');
 Route::post('/book/create', 'BookController@postCreate');
 Route::get('/book/{id}', 'BookController@getShow');
 
-
-//Digital Ocean sugested fix from Piazza:
-
-Route::get('/foobooks/public//books', 'BookController@getIndex');
-Route::get('/foobooks/public//book/create', 'BookController@getCreate');
-Route::post('/foobooks/public//book/create', 'BookController@postCreate');
-Route::get('/foobooks/public//book/{id}', 'BookController@getShow');
-
-
-
-
+Route::get('practice', function(){
+		//echo config('mail.driver');
+		//return 'practice';
+		echo config('app.env') . '<br>';
+		echo config('app.url');
+		//echo config('app.debug');
+	});
 
 });
 
