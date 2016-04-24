@@ -5,5 +5,10 @@
 @stop
 
 @section('content')
-    All books will show here
-@stop
+	<div class='book'> 
+    	@foreach($books as $book)
+ 			 <h2>{{ $book->title }}</h2>
+  			<img src='{{ $book->cover }}'> 
+         @endforeach
+    </div>
+@stop 

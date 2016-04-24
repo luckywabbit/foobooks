@@ -34,14 +34,14 @@
     </header>
 
 	<?php
-	$urlRoot = 'http://localhost/foobooks/public';
+	//$urlRoot = 'http://localhost/foobooks/public';
 	?>
 
 
     <nav>
         <ul>
-            <li><a href='<?php echo $urlRoot; ?>/books'>View all books</a></li>
-            <li><a href='<?php echo $urlRoot; ?>/book/create'>Add a new book</a></li>
+            <li><a href='/books'>View all books</a></li>
+            <li><a href='/book/create'>Add a new book</a></li>
         </ul>
     </nav>
 

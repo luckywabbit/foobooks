@@ -10,9 +10,11 @@ class BookController extends Controller {
     /**
     * Responds to requests to GET /books
     */
-    public function getIndex() {
-        return view('books.index');
-    }
+	
+	public function getIndex() {
+    $books = \App\Book::all();
+    return view('books.index')->with('books',$books);
+	}
 
     /**
      * Responds to requests to GET /books/show/{id}

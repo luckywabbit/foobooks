@@ -8,9 +8,26 @@ Route::group(['middleware' => ['web']], function () {
 /*    Route::get('/', function () {
         return view('welcome');
     });*/
-
-    //Route::get('/books', 'BookController@getIndex');
+	
+/*	Route::get('/', function () {
+    return view('welcome');
+	});*/
+	
 	Route::get('/', 'BookController@getIndex');
+	
+	
+	# ------------------------------------
+	# Practice routes
+	# ------------------------------------
+	for($i = 0; $i <= 100; $i++) {
+		Route::get("/practice/ex".$i, "PracticeController@getEx".$i);
+	}
+	
+	
+	
+	
+
+    Route::get('/books', 'BookController@getIndex');
     Route::get('/book/create', 'BookController@getCreate');
     Route::post('/book/create', 'BookController@postCreate');
     Route::get('/book/show/{title?}', 'BookController@getShow');
